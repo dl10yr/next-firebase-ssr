@@ -7,6 +7,8 @@ if (typeof window !== 'undefined' && !firebaseClient.apps.length) {
   };
 
   firebaseClient.initializeApp(CLIENT_CONFIG);
+  firebaseClient.auth().signInAnonymously()
+
   firebaseClient
     .auth()
     .setPersistence(firebaseClient.auth.Auth.Persistence.SESSION);
